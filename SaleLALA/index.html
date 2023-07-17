@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaleSense #lala</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="signin-form">
+      <form>
+        <h2>Sign in</h2>
+        <div class="form-group">
+          <label for="username">Username or email</label>
+          <input type="text" placeholder="Username or email" id="username" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" id="password" />
+        </div>
+        <div class="signin-action">
+          <button class="signin-button">Sign in</button>
+          <a class="form-link" href="#">Forgot your password?</a>
+        </div>
+        <ul class="formAction-list">
+          <li>
+            <a class="form-link" href="#">Dont have an account?</a>
+          </li>
+          <li>
+            <a class="form-link" href="#">Sign Up</a>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <main class="app hidden">
+      <aside>
+        <!-- Profile starts-->
+        <div class="profile">
+          <div class="profile__picture"></div>
+          <div class="profile__desc">
+            <h5 class="profile__name">Alina Castaneda</h5>
+            <p class="profile__email">alinacasta@gmail.com</p>
+          </div>
+        </div>
+        <!-- Profile ends -->
+
+        <!-- Nav starts -->
+
+        <nav>
+          <ul class="menu__list">
+            <li id="home" class="menu__list__item active">
+              <a href="#" class="nav__link">
+                <div class="list__icon">
+                  <i class="fa-solid fa-house"></i>
+                </div>
+                <span>Home</span>
+              </a>
+            </li>
+            <li id="sells" class="menu__list__item">
+              <a href="#" class="nav__link">
+                <div class="list__icon">
+                  <i class="fa-solid fa-tag"></i>
+                </div>
+                <span>Sells</span>
+              </a>
+            </li>
+            <li id="recents" class="menu__list__item">
+              <a href="#" class="nav__link">
+                <div class="list__icon">
+                  <i class="fa-regular fa-clock"></i>
+                </div>
+                <span>Recents</span>
+              </a>
+            </li>
+            <li id="profile" class="menu__list__item">
+              <a href="#" class="nav__link">
+                <div class="list__icon">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <span>Profile</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div id="logout" class="logout__link">
+          <a href="#" class="nav__link">
+            <div class="list__icon">
+              <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+            <span>Logout</span>
+          </a>
+        </div>
+
+        <!-- Nav ends -->
+      </aside>
+      <!-- Profile Section starts -->
+      <div class="profile__section hidden">
+        <p class="profile__section__name">Alina Castaneda</p>
+        <p>
+          username: <span class="profile__section__username"> alinacasta </span>
+        </p>
+        <p>password: <span class="profile__section__password">ac123</span></p>
+        <div class="info__boxes">
+          <div class="info__box info__box--profit">
+            <span class="info__box__title">Total Profit</span>
+            <span id="total-profit" class="info__box__desc">12.000.000$</span>
+            <span id="per-year" class="info__box__sub"
+              >average profit per year 4.000.000$
+            </span>
+          </div>
+          <div class="info__box info__box--sales">
+            <span class="info__box__title">Total Sales</span>
+            <span id="total-sales" class="info__box__desc">36</span>
+          </div>
+          <div class="info__box info__box--recent">
+            <span class="info__box__title">2023 Profit</span>
+            <span id="recent-profit" class="info__box__desc">1.500.000$</span>
+            <span id="per-sell" class="info__box__sub"
+              >average profit per sell 480.000$
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- Profile Section ends -->
+      <!-- Main Sections starts -->
+      <!-- Section Top starts -->
+      <section class="main__section">
+        <div class="main__section--top" id="main__section--top">
+          <form id="search-form">
+            <div class="search__icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input id="search" type="text" placeholder="Search" />
+          </form>
+          <button class="add__btn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <!-- Section Top ends -->
+        <!-- Section Bottom starts -->
+        <div class="section__bottom">
+          <div class="section__titles">
+            <p class="name__title">Name</p>
+            <p class="price__title">Price</p>
+            <p class="date__title">Date</p>
+          </div>
+          <ul class="sales__list">
+            <li class="profit">
+              <span class="sale__name">3 bedroom penthouse</span>
+              <span class="sale__price">$1,200,000</span>
+              <span class="sale__date">15th April 2023</span>
+              <button class="delete__btn">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <!-- Section Bottom ends -->
+      </section>
+    </main>
+    <div class="modal hidden">
+      <button class="close__btn">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h3>Add sale or expense</h3>
+      <form class="modal__form">
+        <div class="modal__form__group">
+          <label for="actionName">Name</label>
+          <input type="text" id="actionName" placeholder="Enter action name" />
+        </div>
+        <div class="modal__form__group">
+          <label for="actionPrice">Price</label>
+          <input
+            type="text"
+            id="actionPrice"
+            placeholder="Enter action price"
+          />
+        </div>
+        <div class="modal__form__group">
+          <label for="actionDate">Date</label>
+          <input
+            type="date"
+            id="actionDate"
+            max="2023-12-31"
+            min="2020-01-01"
+          />
+        </div>
+        <div class="modal__form__group">
+          <label for="type">Type</label>
+          <input type="text" id="actionType" placeholder="Profit or expense" />
+        </div>
+      </form>
+      <button class="submit">Submit</button>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="exp.js"></script>
+  </body>
+</html>
